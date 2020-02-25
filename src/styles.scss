@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
+
+$font: 'Open Sans', sans-serif;
+$accent-color: #CB3C1A;
+$font-color-primary: #000;
+$font-color-secondary: #fff;
+$box-color: #e0e0e0;
+$header-img: url("bergen.png");
+
+body {
+  font-family: $font;
+}
+
+h1, h2 {
+  margin-bottom: 30px;
+}
+
+
+#Username, #Password {
+  max-width: 400px;
+  margin-bottom: 15px;
+}
+
+.Contact {
+  max-width: 500px;
+}
+
+.submit-message {
+  float: right;
+}
+
+.nav-link {
+  font-size: 0.9em;
+}
+
+.Banner {
+  background-color: #222;
+  background-image: $header-img;
+  background-position: bottom;
+  color: #fff;
+  width: 100%;
+  height: 32vh;
+  margin-bottom: 50px;
+  padding-top: 12vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  text-align: center;
+}
+
+.Banner_Title {
+  font-weight: 800;
+  font-size: 3.7em;
+  margin-bottom: 5px;
+}
+
+.Banner_Text {
+  font-size: 1.5em;
+}
+
+.Footer {
+  padding: 30px 100px;
+  text-align: center;
+  background-color: $box-color;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  &-Text {
+    margin-top: 15px;
+    font-size: 0.8em;
+  }
+}
+
+
+
+.about-logo {
+  margin-top: 40px;
+  opacity: 0.4;
+  max-width: 150px;
+}
+
+.login-btn, .submit-message {
+  background-color: $accent-color;
+  border: none;
+}
+
+
+.Admin-Control {
+  background-color: $box-color;
+  width: 250px;
+  padding: 20px 20px;
+  color: $font-color-primary;
+  font-weight: bold;
+  margin-bottom: 10px;
+    &:hover {
+      background-color: $accent-color;
+      color: $font-color-secondary;
+    }
+}
+
+.Radio {
+  font-size: 0.9em;
+  display: inline;
+}
+
+.error-msg {
+  color: $accent-color;
+  margin-top: 5px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
