@@ -1,9 +1,10 @@
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, NavLink, Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Home from "../home/Home";
+import HotelDetail from "../hotels/HotelDetail"
 import About from "../about/About";
 import Contact from "../contact/Contact";
 import Booking from "../booking/Booking";
@@ -20,7 +21,7 @@ function Layout() {
       <>
         <Router>
             <Navbar bg="light" variant="light" expand="lg">
-                <Navbar.Brand href="#home"><img src={logo} alt="Logo" /></Navbar.Brand>
+                <Navbar.Brand><Link to="/"><img src={logo} alt="Logo" /></Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
@@ -28,16 +29,16 @@ function Layout() {
                     <NavLink to="/booking/" className="nav-link">
                         BOOK A STAY
                     </NavLink>
-                        <NavLink to="/about/" className="nav-link">
-                            ABOUT
-                        </NavLink>
-                        <NavLink to="/contact/" className="nav-link">
-                            CONTACT
-                        </NavLink>
+                    <NavLink to="/about/" className="nav-link">
+                        ABOUT
+                    </NavLink>
+                    <NavLink to="/contact/" className="nav-link">
+                        CONTACT
+                    </NavLink>
 
-                        <NavLink to="/" exact className="nav-link admin-link">
-                            ADMIN SITE
-                        </NavLink>
+                    <NavLink to="/" exact className="nav-link admin-link">
+                        ADMIN SITE
+                    </NavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
@@ -52,6 +53,7 @@ function Layout() {
             <Container>
                 <Switch>
                     <Route path="/" exact component={Home} />
+                    <Route path="/hotel/:id" component={HotelDetail} />
                     <Route path="/about" component={About} />
                     <Route path="/contact" component={Contact} />
                     <Route path="/booking" component={Booking} />
