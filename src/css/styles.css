@@ -48,19 +48,6 @@ h1, h2 {
   font-size: 1.5em;
 }
 
-.Footer {
-  padding: 30px 100px;
-  text-align: center;
-  background-color: #e0e0e0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-.Footer-Text {
-  margin-top: 15px;
-  font-size: 0.8em;
-}
-
 .about-logo {
   margin-top: 40px;
   opacity: 0.4;

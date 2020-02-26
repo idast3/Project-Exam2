@@ -1,0 +1,15 @@
+.hotel {
+    border: 1px solid black;
+    margin-bottom: 30px;
+}   
+
+.hotel a {
+    display: block;
+    background: black;
+    border-color: black;
+}
+
+img {
+    max-width: 100%;
+}
+

@@ -3,6 +3,7 @@ import useForm from "react-hook-form";
 import * as yup from "yup";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { BASE_URL } from "../../../constants/API"
 
 const schema = yup.object().shape({
     establishmentName: yup.string().required("Name is required"),
@@ -27,9 +28,32 @@ export default function AddEstablishment() {
 
     function onSubmit(data) {
         console.log("data", data);
-    }
 
-    console.log(watch("firstName"));
+        const url = BASE_URL + "add-establishments-success.php";
+
+        const formData = new FormData();
+        formData.append("establishmentName", data.establishmentName);
+        formData.append("establishmentEmail", data.establishmentEmail);
+        formData.append("imageUrl", data.imageUrl);
+        formData.append("price", data.price);
+        formData.append("maxGuests", data.maxGuests);
+        formData.append("googleLat", data.maxGuests);
+        formData.append("googleLong", data.googleLong);
+        formData.append("description", data.description);
+        formData.append("selfCatering", data.selfCatering);
+        formData.append("id", Math.floor(Math.random() * Math.floor(4000)));
+
+        fetch(url, {
+            method: 'POST',
+            mode: 'cors',
+            body: formData
+        })
+        .then(function() {
+            console.log("Establishment added")
+        })
+        .catch(error => console.log(error))
+
+    }
 
     return (
         <Form onSubmit={handleSubmit(onSubmit)}>
@@ -92,11 +116,11 @@ export default function AddEstablishment() {
                 {errors.selfCatering && <p className="error-msg">{errors.selfCatering.message}</p>}
             </Form.Group>
 
-            <Form.Group>
+            {/* <Form.Group>
                 <Form.Label><b>ID</b></Form.Label>
                 <Form.Control name="id" id="id" placeholder="00" ref={register} />
                 {errors.id && <p className="error-msg">{errors.id.message}</p>}
-            </Form.Group>
+            </Form.Group> */}
 
 
             <Button type="submit" variant="dark" className="submit-message">
