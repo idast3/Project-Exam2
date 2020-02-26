@@ -1,6 +1,6 @@
 import React from "react";
 import ContactForm from "./ContactForm";
-import "../../styles.css";
+import "../../css/styles.css";
 
 
 export default function Contact() {

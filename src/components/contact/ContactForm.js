@@ -21,6 +21,8 @@ export default function App() {
 
     function onSubmit(data) {
         console.log("data", data);
+
+
     }
 
     console.log(watch("firstName"));

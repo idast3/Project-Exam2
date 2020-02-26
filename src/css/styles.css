@@ -26,7 +26,7 @@ h1, h2 {
 
 .Banner {
   background-color: #222;
-  background-image: url("bergen.png");
+  background-image: url("../images/bergen.png");
   background-position: bottom;
   color: #fff;
   width: 100%;

@@ -1,6 +1,6 @@
 import React from 'react';
 import BookingList from "./list/BookingList";
-import "../../styles.css";
+import "../../css/styles.css";
 
 
 
