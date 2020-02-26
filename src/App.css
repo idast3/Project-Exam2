@@ -1,4 +1,13 @@
-.App {
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -19,4 +28,4 @@
 
 .App-link {
   color: #09d3ac;
-}
+} */
