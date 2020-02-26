@@ -20,10 +20,10 @@ export default function HotelList() {
     }, [url]);
 
     return (
-      <div className="hotel-container">
-        {hotels.map(hotel => (
-            <HotelItem hotel={hotel} key={hotel.id} />
-        ))};
-      </div>
-    );
+        <div className="hotel-container">
+            {hotels.map(hotel => (
+                <HotelItem hotel={hotel} key={hotel.id} />
+            ))}
+        </div>
+    )
 }
