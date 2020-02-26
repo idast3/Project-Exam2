@@ -20,7 +20,7 @@ import styles from "./Layout.module.css"
 function Layout() {
     return (
         <>
-            <div class={styles.content}>
+            <div className={styles.content}>
                 <Router>
                     <Navbar bg="light" variant="light" expand="lg">
                         <Navbar.Brand><Link to="/"><img src={logo} alt="Logo" /></Link></Navbar.Brand>
