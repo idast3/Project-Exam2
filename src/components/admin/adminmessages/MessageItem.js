@@ -5,20 +5,20 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
 
-export default function MessageItem({ hotel }) {
+export default function MessageItem({ clientMessage }) {
 
-    console.log(hotel)
+    console.log(clientMessage)
 
-    const { id, establishmentName, imageUrl } = hotel
+    const { clientName, email, message } = clientMessage
 
     return (
 
-      <div className="hotel">
+      <div className="clientMessage">
       <Card>
-          <Card.Img variant="top" src={imageUrl} />
           <Card.Body>
-              <Card.Title>{establishmentName}</Card.Title>
-              <Link to={`hotel/${id}`} class="btn btn-dark">View more</Link>
+              <Card.Title>{clientName}</Card.Title>
+              <p>Email: {email}</p>
+              <p>Message: {message}</p>
           </Card.Body>
       </Card>
       </div>
@@ -27,5 +27,5 @@ export default function MessageItem({ hotel }) {
 }
 
 MessageItem.propTypes = {
-    hotel: PropTypes.object.isRequired,
+    clientMessage: PropTypes.object.isRequired,
 }

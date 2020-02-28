@@ -11,15 +11,15 @@ import MessageItem from "./MessageItem"
 
 export default function MessageList() {
 
-    const [hotels, setHotels] = useState([]);
+    const [messages, setMessages] = useState([]);
 
-    const url = BASE_URL + "get-establishments.php";
+    const url = BASE_URL + "get-contacts.php";
 
     useEffect(() => {
 
         async function fetchData() {
             const result = await axios(url);
-            setHotels(result.data);
+            setMessages(result.data);
         }
 
         fetchData();
@@ -27,15 +27,12 @@ export default function MessageList() {
 
     return (
 
-        <div className="hotel-container">
-         <h2>Find accommodations</h2>
-        <Form inline className="search">
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-        </Form>
+        <div className="message-container">
+
         <Row>
-            {hotels.map(hotel => (
-              <Col sm={6} md={3} key={hotel.id}>
-                <MessageItem hotel={hotel} key={hotel.id} />
+            {messages.map(clientMessage => (
+              <Col sm={6} md={3} key={clientMessage.clientName}>
+                <MessageItem clientMessage={clientMessage} key={clientMessage.clientName} />
               </Col>
             ))}
         </Row>
