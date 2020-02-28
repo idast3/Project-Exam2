@@ -116,12 +116,6 @@ export default function AddEstablishment() {
                 {errors.selfCatering && <p className="error-msg">{errors.selfCatering.message}</p>}
             </Form.Group>
 
-            {/* <Form.Group>
-                <Form.Label><b>ID</b></Form.Label>
-                <Form.Control name="id" id="id" placeholder="00" ref={register} />
-                {errors.id && <p className="error-msg">{errors.id.message}</p>}
-            </Form.Group> */}
-
 
             <Button type="submit" variant="dark" className="submit-message">
                 Submit

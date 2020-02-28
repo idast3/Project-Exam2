@@ -20,6 +20,8 @@ export default function EnquiryForm() {
         validationSchema: schema
     });
 
+    const getEstablishment = localStorage.getItem("Establishment");
+
     function onSubmit(data) {
         console.log("data", data);
     }
@@ -32,7 +34,7 @@ export default function EnquiryForm() {
 
             <Form.Group>
                 <Form.Label><b>Establishment</b></Form.Label>
-                <Form.Control value="Establishment Name" name="establishment" id="establishment" readOnly ref={register} />
+                <Form.Control value={getEstablishment} name="establishment" id="establishment" readOnly ref={register} />
                 {errors.establishment && <p className="error-msg">{errors.establishment.message}</p>}
             </Form.Group>
 

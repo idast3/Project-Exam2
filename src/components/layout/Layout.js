@@ -8,8 +8,9 @@ import HotelDetail from "../hotels/HotelDetail"
 import About from "../about/About";
 import Contact from "../contact/Contact";
 import Booking from "../booking/Booking";
-import Enquiry from "../booking/enquiry/Enquiry";
+import Enquiry from "../hotels/Enquiry";
 import BookingDetailContainer from "../booking/detail/BookingDetailContainer";
+import Login from "../login/Login";
 import Admin from "../admin/Admin";
 import AdminBookings from "../admin/adminbookings/AdminBookings";
 import AdminEstablishments from "../admin/adminestablishments/AdminEstablishments";
@@ -27,8 +28,10 @@ function Layout() {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto">
-
-                            <NavLink to="/booking/" className="nav-link">
+                            <NavLink to="/" exact className="nav-link">
+                                HOME
+                            </NavLink>
+                            <NavLink to="/booking" className="nav-link">
                                 BOOK A STAY
                             </NavLink>
                             <NavLink to="/about/" className="nav-link">
@@ -37,14 +40,15 @@ function Layout() {
                             <NavLink to="/contact/" className="nav-link">
                                 CONTACT
                             </NavLink>
-
-                            <NavLink to="/" exact className="nav-link admin-link">
-                                ADMIN SITE
+                            <NavLink to="/login/" className="nav-link">
+                                ADMIN LOGIN
                             </NavLink>
+
+
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
-                    
+
                     <div className="Banner">
                         <Container>
                             <h1 className="Banner_Title">VISIT BERGEN</h1>
@@ -61,6 +65,7 @@ function Layout() {
                             <Route path="/booking" component={Booking} />
                             <Route path="/enquiry" component={Enquiry} />
                             <Route path="/booking/:id" component={BookingDetailContainer} />
+                            <Route path="/login" component={Login} />
                             <Route path="/admin" component={Admin} />
                             <Route path="/adminbookings" component={AdminBookings} />
                             <Route path="/adminestablishments" component={AdminEstablishments} />

@@ -7,6 +7,11 @@ h1, h2 {
   margin-bottom: 30px;
 }
 
+h3 {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
 #Username, #Password {
   max-width: 400px;
   margin-bottom: 15px;
@@ -48,6 +53,19 @@ h1, h2 {
   font-size: 1.5em;
 }
 
+.Footer {
+  padding: 30px 100px;
+  text-align: center;
+  background-color: #e0e0e0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.Footer-Text {
+  margin-top: 15px;
+  font-size: 0.8em;
+}
+
 .about-logo {
   margin-top: 40px;
   opacity: 0.4;
@@ -82,6 +100,20 @@ h1, h2 {
   margin-top: 5px;
   font-size: 0.9em;
   font-weight: bold;
+}
+
+.btn-dark {
+  background-color: #CB3C1A;
+  border: none;
+}
+
+.search {
+  margin-bottom: 40px;
+}
+
+.hotel-img {
+  margin-bottom: 20px;
+  max-width: 400px;
 }
 
 /*# sourceMappingURL=styles.css.map */

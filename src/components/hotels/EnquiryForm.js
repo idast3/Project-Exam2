@@ -5,31 +5,35 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { BASE_URL } from "../../constants/API"
 
-
 const schema = yup.object().shape({
     clientName: yup.string().required("Full name is required"),
     email: yup
         .string()
         .email("Please enter a valid email")
         .required("Email is required"),
-    message: yup.string().required("Message is required"),
+    checkin: yup.string().required("Check-in date is required"),
+    checkout: yup.string().required("Check-out date is required"),
 
 });
 
-export default function App() {
+export default function EnquiryForm() {
     const { register, handleSubmit, watch, errors } = useForm({
         validationSchema: schema
     });
 
+        const getEstablishment = localStorage.getItem("Establishment");
+
     function onSubmit(data) {
         console.log("data", data);
 
-        const url = BASE_URL + "contact-success.php";
+        const url = BASE_URL + "enquiry-success.php";
 
         const formData = new FormData();
+        formData.append("establishment", data.establishment);
         formData.append("clientName", data.clientName);
         formData.append("email", data.email);
-        formData.append("message", data.message);
+        formData.append("checkin", data.checkin);
+        formData.append("checkout", data.checkout);
 
         fetch(url, {
             method: 'POST',
@@ -37,36 +41,52 @@ export default function App() {
             body: formData
         })
         .then(function() {
-            console.log("Message sent")
+            console.log("Booking enquiry sent")
         })
         .catch(error => console.log(error))
 
+
+
+
     }
 
-    console.log(watch("clientName"));
 
     return (
         <Form onSubmit={handleSubmit(onSubmit)}>
 
-            <h1>Contact us</h1>
+
+            <Form.Group>
+                <Form.Label><b>Establishment</b></Form.Label>
+                <Form.Control value={getEstablishment} name="establishment" id="establishment" readOnly ref={register} />
+                {errors.establishment && <p className="error-msg">{errors.establishment.message}</p>}
+            </Form.Group>
+
             <Form.Group>
                 <Form.Label><b>Full Name</b></Form.Label>
-                <Form.Control id="clientName" name="clientName" placeholder="Enter your full name" ref={register} />
+                <Form.Control placeholder="Enter Your Name" name="clientName" id="clientName" ref={register} />
                 {errors.clientName && <p className="error-msg">{errors.clientName.message}</p>}
             </Form.Group>
 
 
             <Form.Group>
-                <Form.Label><b>Email</b></Form.Label>
+                <Form.Label><b>Email Address</b></Form.Label>
                 <Form.Control name="email" id="email" placeholder="name@example.com" ref={register} />
                 {errors.email && <p className="error-msg">{errors.email.message}</p>}
             </Form.Group>
 
             <Form.Group>
-                <Form.Label><b>Message</b></Form.Label>
-                <Form.Control as="textarea" rows="4" name="message" id="message" placeholder="Enter a message" ref={register} />
-                {errors.message && <p className="error-msg">{errors.message.message}</p>}
+                <Form.Label><b>Check-in</b></Form.Label>
+                <Form.Control type="date" name="checkin" id="checkin" placeholder="name@example.com" ref={register} />
+                {errors.checkin && <p className="error-msg">{errors.checkin.message}</p>}
             </Form.Group>
+
+            <Form.Group>
+                <Form.Label><b>Check-out</b></Form.Label>
+                <Form.Control type="date" name="checkout" id="checkout" placeholder="name@example.com" ref={register} />
+                {errors.checkout && <p className="error-msg">{errors.checkout.message}</p>}
+            </Form.Group>
+
+
 
 
 

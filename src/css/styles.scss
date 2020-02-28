@@ -15,7 +15,10 @@ h1, h2 {
   margin-bottom: 30px;
 }
 
-
+h3 {
+  font-size: 1.1em;
+  font-weight: bold;
+}
 #Username, #Password {
   max-width: 400px;
   margin-bottom: 15px;
@@ -107,4 +110,20 @@ h1, h2 {
   margin-top: 5px;
   font-size: 0.9em;
   font-weight: bold;
+}
+
+
+// hotels
+.btn-dark {
+  background-color: $accent-color;
+  border: none;
+}
+
+.search {
+  margin-bottom: 40px;
+}
+
+.hotel-img {
+  margin-bottom: 20px;
+  max-width: 400px;
 }

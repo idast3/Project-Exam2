@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
-import "../../css/styles.css"
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
 
-export default function HotelItem({ hotel }) {
+export default function MessageItem({ hotel }) {
 
     console.log(hotel)
 
@@ -27,6 +26,6 @@ export default function HotelItem({ hotel }) {
     );
 }
 
-HotelItem.propTypes = {
+MessageItem.propTypes = {
     hotel: PropTypes.object.isRequired,
 }

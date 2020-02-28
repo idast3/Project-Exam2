@@ -1,4 +1,6 @@
 import React from 'react';
+import MessageList from "./MessageList"
+
 
 
 export default function AdminMessages() {
@@ -7,6 +9,8 @@ export default function AdminMessages() {
 
           <h1>Inbox</h1>
         <p>Contact form messages will appear here </p>
+
+        <MessageList />
 
 
       </div>

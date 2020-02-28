@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import HotelItem from "./HotelItem"
-import { BASE_URL } from "../../constants/API"
+import { BASE_URL } from "../../../constants/API"
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
+import MessageItem from "./MessageItem"
 
 
 
-export default function HotelList() {
+export default function MessageList() {
 
     const [hotels, setHotels] = useState([]);
 
@@ -35,7 +35,7 @@ export default function HotelList() {
         <Row>
             {hotels.map(hotel => (
               <Col sm={6} md={3} key={hotel.id}>
-                <HotelItem hotel={hotel} key={hotel.id} />
+                <MessageItem hotel={hotel} key={hotel.id} />
               </Col>
             ))}
         </Row>
