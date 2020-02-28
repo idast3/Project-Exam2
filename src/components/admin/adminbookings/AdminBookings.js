@@ -1,4 +1,5 @@
 import React from 'react';
+import EnquiryList from "./EnquiryList"
 
 
 export default function AdminBookings() {
@@ -6,8 +7,8 @@ export default function AdminBookings() {
       <div className="AdminBookings">
 
           <h1>Booking Enquiries</h1>
-        <p>Booking enquiries will appear here </p>
 
+        <EnquiryList />
 
       </div>
     );

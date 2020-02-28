@@ -14,13 +14,18 @@ export default function MessageItem({ clientMessage }) {
     return (
 
       <div className="clientMessage">
-      <Card>
+
+      <Card className="clientMessage_card">
           <Card.Body>
               <Card.Title>{clientName}</Card.Title>
-              <p>Email: {email}</p>
-              <p>Message: {message}</p>
+                <Card.Text>
+                  <p className="clientMessage_email">{email}</p>
+                  <p>{message}</p>
+                </Card.Text>
+                <Card.Link href="#" className="clientMessage_action">Reply</Card.Link><Card.Link href="#" className="clientMessage_action">Delete</Card.Link>
           </Card.Body>
       </Card>
+
       </div>
 
     );

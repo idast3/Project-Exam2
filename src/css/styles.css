@@ -78,12 +78,12 @@ h3 {
 }
 
 .Admin-Control {
-  background-color: #e0e0e0;
-  width: 250px;
+  border: 1px solid #e0e0e0;
+  width: 300px;
   padding: 20px 20px;
   color: #000;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .Admin-Control:hover {
   background-color: #CB3C1A;
@@ -114,6 +114,24 @@ h3 {
 .hotel-img {
   margin-bottom: 20px;
   max-width: 400px;
+}
+
+.clientMessage_email {
+  font-size: 0.9em;
+  opacity: 0.6;
+  margin-top: -5px;
+}
+
+.clientMessage_card {
+  height: 100%;
+}
+
+.clientMessage_action {
+  color: #CB3C1A;
+  font-size: 0.9em;
+}
+.clientMessage_action:hover {
+  color: #000;
 }
 
 /*# sourceMappingURL=styles.css.map */

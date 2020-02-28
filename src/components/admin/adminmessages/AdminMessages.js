@@ -7,8 +7,7 @@ export default function AdminMessages() {
     return (
       <div className="AdminMessages">
 
-          <h1>Inbox</h1>
-        <p>Contact form messages will appear here </p>
+          <h1>New messages</h1>
 
         <MessageList />
 
