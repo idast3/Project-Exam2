@@ -6,6 +6,8 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useHistory } from "react-router-dom";
 import useForm from "react-hook-form";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 export default function HotelDetail() {
 
@@ -22,6 +24,10 @@ export default function HotelDetail() {
 
     const url = BASE_URL + "get-establishment.php?id=" + id;
 
+    var catering = "";
+
+
+
     useEffect(() => {
 
         async function fetchData() {
@@ -35,27 +41,52 @@ export default function HotelDetail() {
         fetchData();
     }, [url]);
 
+    if (hotel.selfCatering === "true") {
+      catering = "Yes";
+    } else if (hotel.selfCatering === "false") {
+      catering = "No";
+    }
+
+    const mailTo = "mailto:"+ hotel.establishmentEmail;
+
     return (
-      <div className="hotel-detail-container">
 
-          <h2>{hotel.establishmentName}</h2>
+      <div className="detail">
+        <h2>{hotel.establishmentName}</h2>
 
-          <img src={hotel.imageUrl} alt={hotel.establishmentName} className="hotel-img" />
+        <Row>
+          <Col sm={12} lg={6} >
 
-          <h3>Description</h3>
-          <p> {hotel.description}</p>
+            <img src={hotel.imageUrl} alt={hotel.establishmentName} className="hotel-img" />
+          </Col>
 
-          <h3>Email</h3>
-          <p>{hotel.establishmentEmail}</p>
+          <Col sm={12} lg={6} >
 
-          <h3>Max Guests</h3>
-          <p>{hotel.maxGuests}</p>
+            <h3>Description</h3>
+            <p> {hotel.description}</p>
 
-          <Form onSubmit={handleSubmit(onSubmit)}>
-            <Button type="submit" variant="dark" className="login-btn">
-                Book now
-            </Button>
-          </Form>
+            <h3>Email</h3>
+            <p><a href={mailTo}>{hotel.establishmentEmail}</a></p>
+
+            <h3>Max Guests</h3>
+            <p>{hotel.maxGuests}</p>
+
+
+            <h3>Self Catering</h3>
+            <p>{catering}</p>
+
+            <h3>Google Coordinates</h3>
+            <p>Latitude: {hotel.googleLat} / Longitude: {hotel.googleLong}  </p>
+            <hr />
+
+            <Form onSubmit={handleSubmit(onSubmit)}>
+            <p className="detail_price">${hotel.price} / night</p>
+              <Button type="submit" variant="dark" className="detail_book">
+                  Book now
+              </Button>
+            </Form>
+            </Col>
+          </Row>
       </div>
     );
 }

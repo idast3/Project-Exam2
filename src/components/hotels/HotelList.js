@@ -21,6 +21,7 @@ export default function HotelList() {
         async function fetchData() {
             const result = await axios(url);
             setHotels(result.data);
+            setFilteredCards(result.data);
         }
 
         fetchData();
