@@ -7,7 +7,6 @@ import Home from "../home/Home";
 import HotelDetail from "../hotels/HotelDetail"
 import About from "../about/About";
 import Contact from "../contact/Contact";
-import Booking from "../booking/Booking";
 import Enquiry from "../hotels/Enquiry";
 import BookingDetailContainer from "../booking/detail/BookingDetailContainer";
 import Login from "../login/Login";
@@ -30,9 +29,6 @@ function Layout() {
                             <Nav className="mr-auto">
                             <NavLink to="/" exact className="nav-link">
                                 HOME
-                            </NavLink>
-                            <NavLink to="/booking" className="nav-link">
-                                BOOK A STAY
                             </NavLink>
                             <NavLink to="/about/" className="nav-link">
                                 ABOUT
@@ -62,9 +58,7 @@ function Layout() {
                             <Route path="/hotel/:id" component={HotelDetail} />
                             <Route path="/about" component={About} />
                             <Route path="/contact" component={Contact} />
-                            <Route path="/booking" component={Booking} />
                             <Route path="/enquiry" component={Enquiry} />
-                            <Route path="/booking/:id" component={BookingDetailContainer} />
                             <Route path="/login" component={Login} />
                             <Route path="/admin" component={Admin} />
                             <Route path="/adminbookings" component={AdminBookings} />
