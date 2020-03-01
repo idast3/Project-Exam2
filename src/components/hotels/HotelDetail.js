@@ -24,7 +24,7 @@ export default function HotelDetail() {
 
     const url = BASE_URL + "get-establishment.php?id=" + id;
 
-    var catering = "";
+    let catering = "";
 
 
 
@@ -32,9 +32,6 @@ export default function HotelDetail() {
 
         async function fetchData() {
             const result = await axios(url);
-            console.log("dd");
-
-            console.log(result.data);
             setHotel(result.data);
         }
 
@@ -80,8 +77,8 @@ export default function HotelDetail() {
             <hr />
 
             <Form onSubmit={handleSubmit(onSubmit)}>
-            <p className="detail_price">${hotel.price} / night</p>
-              <Button type="submit" variant="dark" className="detail_book">
+            <p className="detail__price">${hotel.price} / night</p>
+              <Button type="submit" variant="dark" className="detail__book">
                   Book now
               </Button>
             </Form>

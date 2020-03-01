@@ -1,4 +1,4 @@
-.Admin-Control {
+.Admin__Control {
   border: 1px solid $box-color;
   width: 300px;
   padding: 20px 20px;
@@ -11,17 +11,14 @@
     }
 }
 
-.clientMessage_email {
+.clientMessage__detail {
   font-size: 0.9em;
   opacity: 0.6;
   margin-top: -5px;
 }
 
-.clientMessage_card {
-  height: 100%;
-}
 
-.clientMessage_action {
+.clientMessage__action {
   color: $accent-color;
   font-size: 0.9em;
     &:hover {

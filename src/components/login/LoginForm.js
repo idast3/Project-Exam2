@@ -13,8 +13,6 @@ export default function LoginForm() {
         history.push("/admin");
     };
 
-    console.log(errors);
-
     return (
         <Container>
 

@@ -4,7 +4,7 @@
   margin-right: 10vw;
 }
 
-.search-input {
+.search__input {
   text-align: center;
 }
 
@@ -19,25 +19,24 @@
 }
 
 
-.hotel-container_search {
+.hotel-container__search {
   text-align: center;
 }
 
-.hotel_name {
+.hotel__name {
   font-size: 1.1em;
   font-weight: bold;
 }
 
-.hotel_card {
+.hotel__card {
   margin-bottom: 30px;
 }
 
-.hotel_price {
+.hotel__price {
   font-size: 0.9em;
 }
 
-
-.detail_price {
+.detail__price {
   font-size: 1.5em;
   margin: 30px 0px;
 }

@@ -3,23 +3,20 @@ import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 import "../../css/styles.css"
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 
 
 export default function HotelItem({ hotel }) {
-
-    console.log(hotel)
 
     const { id, establishmentName, imageUrl, description, price } = hotel
 
     return (
 
       <div className="hotel">
-      <Card className="hotel_card">
+      <Card className="hotel__card">
           <Card.Img variant="top" src={imageUrl} />
           <Card.Body>
-              <Card.Title className="hotel_name" >{establishmentName}</Card.Title>
-              <p className="hotel_price">${price}</p>
+              <Card.Title className="hotel__name" >{establishmentName}</Card.Title>
+              <p className="hotel__price">${price}</p>
               <Link to={`hotel/${id}`} class="btn btn-dark">View more</Link>
           </Card.Body>
       </Card>

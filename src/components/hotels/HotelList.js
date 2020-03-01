@@ -47,26 +47,26 @@ export default function HotelList() {
     return (
 
         <div className="hotel-container">
-        <div className="hotel-container_search">
-         <h2>Find accommodations</h2>
-        <Form className="search">
-            <FormControl type="text" placeholder="Search..." className="mr-sm-2 search-input" onChange={event => filterThroughCards(event)}/>
-        </Form>
-        </div>
-        <Row>
+          <div className="hotel-container__search">
+           <h2>Find accommodations</h2>
+            <Form className="search">
+                <FormControl type="text" placeholder="Search..." className="mr-sm-2 search__input" onChange={event => filterThroughCards(event)}/>
+            </Form>
+          </div>
 
-        {filteredCards.map(hotel => {
-            const { id, establishmentName, imageUrl } = hotel;
+          <Row>
 
-            return (
-              <Col sm={6} md={3} key={hotel.id}>
-                <HotelItem hotel={hotel} key={hotel.id} />
-              </Col>
-            );
-        })}
+          {filteredCards.map(hotel => {
+              const { id, establishmentName, imageUrl } = hotel;
 
+              return (
+                <Col sm={6} md={3} key={hotel.id}>
+                  <HotelItem hotel={hotel} key={hotel.id} />
+                </Col>
+              );
+          })}
 
-        </Row>
+          </Row>
         </div>
 
     )

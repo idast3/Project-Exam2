@@ -22,12 +22,11 @@ const schema = yup.object().shape({
 });
 
 export default function AddEstablishment() {
-    const { register, handleSubmit, watch, errors } = useForm({
+    const { register, handleSubmit, errors } = useForm({
         validationSchema: schema
     });
 
     function onSubmit(data) {
-        console.log("data", data);
 
         const url = BASE_URL + "add-establishments-success.php";
 
@@ -49,7 +48,7 @@ export default function AddEstablishment() {
             body: formData
         })
         .then(function() {
-            console.log("Establishment added")
+
         })
         .catch(error => console.log(error))
 
@@ -59,62 +58,62 @@ export default function AddEstablishment() {
         <Form onSubmit={handleSubmit(onSubmit)}>
 
             <h1>New Establishment</h1>
-            <Form.Group>
-                <Form.Label><b>Establishment Name</b></Form.Label>
-                <Form.Control name="establishmentName" id="establishmentName" placeholder="Establishment name" ref={register} />
-                {errors.establishmentName && <p className="error-msg">{errors.establishmentName.message}</p>}
-            </Form.Group>
+              <Form.Group>
+                  <Form.Label><b>Establishment Name</b></Form.Label>
+                  <Form.Control name="establishmentName" id="establishmentName" placeholder="Establishment name" ref={register} />
+                  {errors.establishmentName && <p className="error-msg">{errors.establishmentName.message}</p>}
+              </Form.Group>
 
-            <Form.Group>
-                <Form.Label><b>Establishment Email</b></Form.Label>
-                <Form.Control name="establishmentEmail" id="establishmentEmail" placeholder="name@example.com" ref={register} />
-                {errors.establishmentEmail && <p className="error-msg">{errors.establishmentEmail.message}</p>}
-            </Form.Group>
+              <Form.Group>
+                  <Form.Label><b>Establishment Email</b></Form.Label>
+                  <Form.Control name="establishmentEmail" id="establishmentEmail" placeholder="name@example.com" ref={register} />
+                  {errors.establishmentEmail && <p className="error-msg">{errors.establishmentEmail.message}</p>}
+              </Form.Group>
 
-            <Form.Group>
-                <Form.Label><b>Image URL</b></Form.Label>
-                <Form.Control name="imageUrl" id="imageUrl" placeholder="http://image.jpg" ref={register} />
-                {errors.imageUrl && <p className="error-msg">{errors.imageUrl.message}</p>}
-            </Form.Group>
+              <Form.Group>
+                  <Form.Label><b>Image URL</b></Form.Label>
+                  <Form.Control name="imageUrl" id="imageUrl" placeholder="http://image.jpg" ref={register} />
+                  {errors.imageUrl && <p className="error-msg">{errors.imageUrl.message}</p>}
+              </Form.Group>
 
-            <Form.Group>
-                <Form.Label><b>Price per person per night ($)</b></Form.Label>
-                <Form.Control name="price" id="price" placeholder="$" ref={register} />
-                {errors.price && <p className="error-msg">{errors.price.message}</p>}
-            </Form.Group>
+              <Form.Group>
+                  <Form.Label><b>Price per person per night ($)</b></Form.Label>
+                  <Form.Control name="price" id="price" placeholder="$" ref={register} />
+                  {errors.price && <p className="error-msg">{errors.price.message}</p>}
+              </Form.Group>
 
-            <Form.Group>
-                <Form.Label><b>Max Guests</b></Form.Label>
-                <Form.Control name="maxGuests" id="maxGuests" placeholder="000" ref={register} />
-                {errors.maxGuests && <p className="error-msg">{errors.maxGuests.message}</p>}
-            </Form.Group>
+              <Form.Group>
+                  <Form.Label><b>Max Guests</b></Form.Label>
+                  <Form.Control name="maxGuests" id="maxGuests" placeholder="000" ref={register} />
+                  {errors.maxGuests && <p className="error-msg">{errors.maxGuests.message}</p>}
+              </Form.Group>
 
-            <Form.Group>
-                <Form.Label><b>Google Coordinates Latitude</b></Form.Label>
-                <Form.Control name="googleLat" id="googleLat" placeholder="00.000000" ref={register} />
-                {errors.googleLat && <p className="error-msg">{errors.googleLat.message}</p>}
-            </Form.Group>
+              <Form.Group>
+                  <Form.Label><b>Google Coordinates Latitude</b></Form.Label>
+                  <Form.Control name="googleLat" id="googleLat" placeholder="00.000000" ref={register} />
+                  {errors.googleLat && <p className="error-msg">{errors.googleLat.message}</p>}
+              </Form.Group>
 
-            <Form.Group>
-                <Form.Label><b>Google Coordinates Longitude</b></Form.Label>
-                <Form.Control name="googleLong" id="googleLong" placeholder="00.000000" ref={register} />
-                {errors.googleLong && <p className="error-msg">{errors.googleLong.message}</p>}
-            </Form.Group>
+              <Form.Group>
+                  <Form.Label><b>Google Coordinates Longitude</b></Form.Label>
+                  <Form.Control name="googleLong" id="googleLong" placeholder="00.000000" ref={register} />
+                  {errors.googleLong && <p className="error-msg">{errors.googleLong.message}</p>}
+              </Form.Group>
 
-            <Form.Group>
-                <Form.Label><b>Description</b></Form.Label>
-                <Form.Control as="textarea" rows="4" name="description" id="description" placeholder="Describe the establishment" ref={register} />
-                {errors.description && <p className="error-msg">{errors.description.message}</p>}
-            </Form.Group>
+              <Form.Group>
+                  <Form.Label><b>Description</b></Form.Label>
+                  <Form.Control as="textarea" rows="4" name="description" id="description" placeholder="Describe the establishment" ref={register} />
+                  {errors.description && <p className="error-msg">{errors.description.message}</p>}
+              </Form.Group>
 
-            <Form.Group>
-                <Form.Label><b>Self Catering</b></Form.Label><br />
-                <Form.Label htmlFor="true" className="Radio"><b>True</b></Form.Label>
-                <Form.Control type="radio" value="true" name="selfCatering" id="true" ref={register} />
-                <Form.Label htmlFor="false" className="Radio"><b>False</b></Form.Label>
-                <Form.Control type="radio" value="false" name="selfCatering" id="false" ref={register} />
-                {errors.selfCatering && <p className="error-msg">{errors.selfCatering.message}</p>}
-            </Form.Group>
+              <Form.Group>
+                  <Form.Label><b>Self Catering</b></Form.Label><br />
+                  <Form.Label htmlFor="true" className="Radio"><b>True</b></Form.Label>
+                  <Form.Control type="radio" value="true" name="selfCatering" id="true" ref={register} />
+                  <Form.Label htmlFor="false" className="Radio"><b>False</b></Form.Label>
+                  <Form.Control type="radio" value="false" name="selfCatering" id="false" ref={register} />
+                  {errors.selfCatering && <p className="error-msg">{errors.selfCatering.message}</p>}
+              </Form.Group>
 
 
             <Button type="submit" variant="dark" className="submit-message">

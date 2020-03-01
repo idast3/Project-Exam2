@@ -22,7 +22,7 @@ export default function App() {
     });
 
     function onSubmit(data) {
-        console.log("data", data);
+
 
         const url = BASE_URL + "contact-success.php";
 
@@ -37,36 +37,35 @@ export default function App() {
             body: formData
         })
         .then(function() {
-            console.log("Message sent")
+
         })
         .catch(error => console.log(error))
 
     }
 
-    console.log(watch("clientName"));
 
     return (
         <Form onSubmit={handleSubmit(onSubmit)}>
 
             <h1>Contact us</h1>
-            <Form.Group>
-                <Form.Label><b>Full Name</b></Form.Label>
-                <Form.Control id="clientName" name="clientName" placeholder="Enter your full name" ref={register} />
-                {errors.clientName && <p className="error-msg">{errors.clientName.message}</p>}
-            </Form.Group>
+              <Form.Group>
+                  <Form.Label><b>Full Name</b></Form.Label>
+                  <Form.Control id="clientName" name="clientName" placeholder="Enter your full name" ref={register} />
+                  {errors.clientName && <p className="error-msg">{errors.clientName.message}</p>}
+              </Form.Group>
 
 
-            <Form.Group>
-                <Form.Label><b>Email</b></Form.Label>
-                <Form.Control name="email" id="email" placeholder="name@example.com" ref={register} />
-                {errors.email && <p className="error-msg">{errors.email.message}</p>}
-            </Form.Group>
+              <Form.Group>
+                  <Form.Label><b>Email</b></Form.Label>
+                  <Form.Control name="email" id="email" placeholder="name@example.com" ref={register} />
+                  {errors.email && <p className="error-msg">{errors.email.message}</p>}
+              </Form.Group>
 
-            <Form.Group>
-                <Form.Label><b>Message</b></Form.Label>
-                <Form.Control as="textarea" rows="4" name="message" id="message" placeholder="Enter a message" ref={register} />
-                {errors.message && <p className="error-msg">{errors.message.message}</p>}
-            </Form.Group>
+              <Form.Group>
+                  <Form.Label><b>Message</b></Form.Label>
+                  <Form.Control as="textarea" rows="4" name="message" id="message" placeholder="Enter a message" ref={register} />
+                  {errors.message && <p className="error-msg">{errors.message.message}</p>}
+              </Form.Group>
 
 
 

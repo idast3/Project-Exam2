@@ -8,13 +8,12 @@ import HotelDetail from "../hotels/HotelDetail"
 import About from "../about/About";
 import Contact from "../contact/Contact";
 import Enquiry from "../hotels/Enquiry";
-import BookingDetailContainer from "../booking/detail/BookingDetailContainer";
 import Login from "../login/Login";
 import Admin from "../admin/Admin";
 import AdminBookings from "../admin/adminbookings/AdminBookings";
 import AdminEstablishments from "../admin/adminestablishments/AdminEstablishments";
 import AdminMessages from "../admin//adminmessages/AdminMessages";
-import logo from "./logo.png"
+import logo from "../../images/logo.png"
 import styles from "./Layout.module.css"
 
 function Layout() {
@@ -39,16 +38,14 @@ function Layout() {
                             <NavLink to="/login/" className="nav-link">
                                 ADMIN LOGIN
                             </NavLink>
-
-
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
 
                     <div className="Banner">
                         <Container>
-                            <h1 className="Banner_Title">VISIT BERGEN</h1>
-                            <p className="Banner_Text">Book a stay at our finest hotels, B&Bs and guesthouses in the city of Bergen.</p>
+                            <h1 className="Banner__Title">VISIT BERGEN</h1>
+                            <p className="Banner__Text">Book a stay at our finest hotels, B&Bs and guesthouses in the city of Bergen.</p>
                         </Container>
                     </div>
 
@@ -70,9 +67,9 @@ function Layout() {
                 </Router>
             </div>
 
-            <footer class={styles.footer}>
+            <footer className={styles.footer}>
                 <Container>
-                    <div class={styles.footerContainer}>
+                    <div className={styles.footerContainer}>
                         <img src={logo} alt="Logo" /><span>Copyright &copy; 2020</span>
                     </div>
                 </Container>

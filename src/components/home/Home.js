@@ -1,5 +1,4 @@
 import React from 'react';
-// import LoginForm from "../login/LoginForm";
 import HotelList from "../hotels/HotelList";
 
 export default function Login() {

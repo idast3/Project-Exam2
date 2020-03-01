@@ -24,7 +24,6 @@ export default function EnquiryForm() {
         const getEstablishment = localStorage.getItem("Establishment");
 
     function onSubmit(data) {
-        console.log("data", data);
 
         const url = BASE_URL + "enquiry-success.php";
 
@@ -41,7 +40,7 @@ export default function EnquiryForm() {
             body: formData
         })
         .then(function() {
-            console.log("Booking enquiry sent")
+
         })
         .catch(error => console.log(error))
 
@@ -85,9 +84,6 @@ export default function EnquiryForm() {
                 <Form.Control type="date" name="checkout" id="checkout" placeholder="name@example.com" ref={register} />
                 {errors.checkout && <p className="error-msg">{errors.checkout.message}</p>}
             </Form.Group>
-
-
-
 
 
             <Button type="submit" variant="dark" className="submit-message">

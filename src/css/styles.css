@@ -37,13 +37,13 @@ a:hover {
   text-align: center;
 }
 
-.Banner_Title {
+.Banner__Title {
   font-weight: 800;
   font-size: 3.7em;
   margin-bottom: 5px;
 }
 
-.Banner_Text {
+.Banner__Text {
   font-size: 1.5em;
 }
 
@@ -86,7 +86,7 @@ hr {
   border: none;
 }
 
-.Admin-Control {
+.Admin__Control {
   border: 1px solid #e0e0e0;
   width: 300px;
   padding: 20px 20px;
@@ -94,26 +94,22 @@ hr {
   font-weight: bold;
   margin-bottom: 15px;
 }
-.Admin-Control:hover {
+.Admin__Control:hover {
   background-color: #CB3C1A;
   color: #fff;
 }
 
-.clientMessage_email {
+.clientMessage__detail {
   font-size: 0.9em;
   opacity: 0.6;
   margin-top: -5px;
 }
 
-.clientMessage_card {
-  height: 100%;
-}
-
-.clientMessage_action {
+.clientMessage__action {
   color: #CB3C1A;
   font-size: 0.9em;
 }
-.clientMessage_action:hover {
+.clientMessage__action:hover {
   color: #000;
 }
 
@@ -123,7 +119,7 @@ hr {
   margin-right: 10vw;
 }
 
-.search-input {
+.search__input {
   text-align: center;
 }
 
@@ -137,24 +133,24 @@ hr {
   font-size: 1.1em;
 }
 
-.hotel-container_search {
+.hotel-container__search {
   text-align: center;
 }
 
-.hotel_name {
+.hotel__name {
   font-size: 1.1em;
   font-weight: bold;
 }
 
-.hotel_card {
+.hotel__card {
   margin-bottom: 30px;
 }
 
-.hotel_price {
+.hotel__price {
   font-size: 0.9em;
 }
 
-.detail_price {
+.detail__price {
   font-size: 1.5em;
   margin: 30px 0px;
 }
@@ -169,10 +165,11 @@ hr {
   height: 200px;
 }
 
-.about-logo {
+.About__logo {
   margin-top: 40px;
   opacity: 0.4;
-  max-width: 150px;
+  max-width: 120px;
+  float: right;
 }
 
 /*# sourceMappingURL=styles.css.map */
