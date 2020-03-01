@@ -7,7 +7,7 @@ import Card from "react-bootstrap/Card";
 
 export default function HotelItem({ hotel }) {
 
-    const { id, establishmentName, imageUrl, description, price } = hotel
+    const { id, establishmentName, imageUrl, price } = hotel
 
     return (
 
