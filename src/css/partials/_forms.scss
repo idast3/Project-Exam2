@@ -1,0 +1,34 @@
+#Username, #Password {
+  max-width: 400px;
+  margin-bottom: 15px;
+}
+
+.Contact {
+  max-width: 500px;
+}
+
+.submit-message {
+  float: right;
+}
+
+.login-btn, .submit-message {
+  background-color: $accent-color;
+  border: none;
+}
+
+.Radio {
+  font-size: 0.9em;
+  display: inline;
+}
+
+.error-msg {
+  color: $accent-color;
+  margin-top: 5px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.btn-dark {
+  background-color: $accent-color;
+  border: none;
+}

@@ -19,19 +19,6 @@ a:hover {
   color: #CB3C1A;
 }
 
-#Username, #Password {
-  max-width: 400px;
-  margin-bottom: 15px;
-}
-
-.Contact {
-  max-width: 500px;
-}
-
-.submit-message {
-  float: right;
-}
-
 .nav-link {
   font-size: 0.9em;
 }
@@ -60,41 +47,26 @@ a:hover {
   font-size: 1.5em;
 }
 
-.Footer {
-  padding: 30px 100px;
-  text-align: center;
-  background-color: #e0e0e0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-.Footer-Text {
-  margin-top: 15px;
-  font-size: 0.8em;
+hr {
+  margin-top: 30px;
 }
 
-.about-logo {
-  margin-top: 40px;
-  opacity: 0.4;
-  max-width: 150px;
+#Username, #Password {
+  max-width: 400px;
+  margin-bottom: 15px;
+}
+
+.Contact {
+  max-width: 500px;
+}
+
+.submit-message {
+  float: right;
 }
 
 .login-btn, .submit-message {
   background-color: #CB3C1A;
   border: none;
-}
-
-.Admin-Control {
-  border: 1px solid #e0e0e0;
-  width: 300px;
-  padding: 20px 20px;
-  color: #000;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-.Admin-Control:hover {
-  background-color: #CB3C1A;
-  color: #fff;
 }
 
 .Radio {
@@ -112,6 +84,37 @@ a:hover {
 .btn-dark {
   background-color: #CB3C1A;
   border: none;
+}
+
+.Admin-Control {
+  border: 1px solid #e0e0e0;
+  width: 300px;
+  padding: 20px 20px;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.Admin-Control:hover {
+  background-color: #CB3C1A;
+  color: #fff;
+}
+
+.clientMessage_email {
+  font-size: 0.9em;
+  opacity: 0.6;
+  margin-top: -5px;
+}
+
+.clientMessage_card {
+  height: 100%;
+}
+
+.clientMessage_action {
+  color: #CB3C1A;
+  font-size: 0.9em;
+}
+.clientMessage_action:hover {
+  color: #000;
 }
 
 .search {
@@ -162,30 +165,14 @@ a:hover {
   padding-right: 30px;
 }
 
-hr {
-  margin-top: 30px;
-}
-
 .hotel img {
   height: 200px;
 }
 
-.clientMessage_email {
-  font-size: 0.9em;
-  opacity: 0.6;
-  margin-top: -5px;
-}
-
-.clientMessage_card {
-  height: 100%;
-}
-
-.clientMessage_action {
-  color: #CB3C1A;
-  font-size: 0.9em;
-}
-.clientMessage_action:hover {
-  color: #000;
+.about-logo {
+  margin-top: 40px;
+  opacity: 0.4;
+  max-width: 150px;
 }
 
 /*# sourceMappingURL=styles.css.map */
